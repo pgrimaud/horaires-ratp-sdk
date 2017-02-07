@@ -1,17 +1,17 @@
 <?php
 namespace Ratp\Response;
 
-use Ratp\WrStations;
+use Ratp\WrDirections;
 
-class StationsResponse
+class DirectionsResponse
 {
     /**
-     * @var WrStations $return
+     * @var WrDirections $return
      */
     protected $return = null;
 
     /**
-     * @param WrStations $return
+     * @param WrDirections $return
      */
     public function __construct($return)
     {
@@ -19,7 +19,7 @@ class StationsResponse
     }
 
     /**
-     * @return WrStations
+     * @return WrDirections
      */
     public function getReturn()
     {
@@ -27,8 +27,8 @@ class StationsResponse
     }
 
     /**
-     * @param WrStations $return
-     * @return \Ratp\Response\StationsResponse
+     * @param WrDirections $return
+     * @return DirectionsResponse
      */
     public function setReturn($return)
     {
