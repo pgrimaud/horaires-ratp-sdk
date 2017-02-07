@@ -7,8 +7,9 @@ class Api extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = [
-        'getLinesResponse'   => \Ratp\Response\LinesResponse::class,
-        'getVersionResponse' => \Ratp\Response\VersionResponse::class
+        'getLinesResponse'    => \Ratp\Response\LinesResponse::class,
+        'getVersionResponse'  => \Ratp\Response\VersionResponse::class,
+        'getStationsResponse' => \Ratp\Response\StationsResponse::class
     ];
 
     /**
@@ -48,5 +49,14 @@ class Api extends \SoapClient
     public function getLines(Lines $parameters)
     {
         return $this->__soapCall('getLines', array($parameters));
+    }
+
+    /**
+     * @param Stations $parameters
+     * @return \Ratp\Response\StationsResponse
+     */
+    public function getStations(Stations $parameters)
+    {
+        return $this->__soapCall('getStations', array($parameters));
     }
 }
