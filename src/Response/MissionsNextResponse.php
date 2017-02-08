@@ -1,17 +1,17 @@
 <?php
 namespace Ratp\Response;
 
-use Ratp\GeoPoint;
+use Ratp\WrMissions;
 
-class GeoPointsResponse
+class MissionsNextResponse
 {
     /**
-     * @var GeoPoint $return
+     * @var WrMissions $return
      */
     protected $return = null;
 
     /**
-     * @param GeoPoint $return
+     * @param WrMissions $return
      */
     public function __construct($return)
     {
@@ -19,7 +19,7 @@ class GeoPointsResponse
     }
 
     /**
-     * @return GeoPoint
+     * @return WrMissions
      */
     public function getReturn()
     {
@@ -27,12 +27,13 @@ class GeoPointsResponse
     }
 
     /**
-     * @param GeoPoint $return
-     * @return \Ratp\Response\GeoPointsResponse
+     * @param WrMissions $return
+     * @return \Ratp\Response\MissionsNextResponse
      */
     public function setReturn($return)
     {
         $this->return = $return;
         return $this;
     }
+
 }

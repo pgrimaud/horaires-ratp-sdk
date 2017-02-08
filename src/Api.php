@@ -12,9 +12,12 @@ class Api extends \SoapClient
         'getStationsResponse'      => \Ratp\Response\StationsResponse::class,
         'getDirectionsResponse'    => \Ratp\Response\DirectionsResponse::class,
         'getPerturbationsResponse' => \Ratp\Response\PerturbationsResponse::class,
-        'getGeoPointsResponse'     => \Ratp\Response\GeoPointsResponse::class,
-        'WrPerturbations'          => \Ratp\WrPerturbations::class,
-        'WrStations'               => \Ratp\WrStations::class,
+        'getMissionsNextResponse'  => \Ratp\Response\MissionsNextResponse::class,
+
+        'WrPerturbations' => \Ratp\WrPerturbations::class,
+        'WrStations'      => \Ratp\WrStations::class,
+        'WrMissions'      => \Ratp\WrMissions::class,
+        'WrDirections'    => \Ratp\WrDirections::class,
     ];
 
     /**
@@ -85,11 +88,11 @@ class Api extends \SoapClient
     }
 
     /**
-     * @param GeoPoints $parameters
-     * @return \Ratp\Response\GeoPointsResponse
+     * @param MissionsNext $parameters
+     * @return \Ratp\Response\MissionsNextResponse
      */
-    public function getGeoPoints(GeoPoints $parameters)
+    public function getMissionsNext(MissionsNext $parameters)
     {
-        return $this->__soapCall('getGeoPoints', array($parameters));
+        return $this->__soapCall('getMissionsNext', array($parameters));
     }
 }
