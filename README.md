@@ -1,8 +1,10 @@
-# Horaires temps réel RATP SDK
+# Horaires RATP SDK
 
 Retrieve real time schedules for any given RER (train), Metro, or Tramway stop in real time.
 
 You hate SOAP protocol and want to use the official RATP API? Welcome here.
+
+**BEWARE : WSDL contains some "*franglish*" such as documentation.**
 
 ## Requirements
 
