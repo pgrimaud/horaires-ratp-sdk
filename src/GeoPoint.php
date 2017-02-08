@@ -36,7 +36,6 @@ class GeoPoint
 
     public function __construct()
     {
-
     }
 
     /**

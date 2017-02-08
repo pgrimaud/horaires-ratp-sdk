@@ -21,7 +21,6 @@ class WrPerturbations
 
     public function __construct()
     {
-
     }
 
     /**

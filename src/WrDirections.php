@@ -27,7 +27,6 @@ class WrDirections
 
     public function __construct()
     {
-
     }
 
     /**
@@ -101,5 +100,4 @@ class WrDirections
         $this->directions = $directions;
         return $this;
     }
-
 }

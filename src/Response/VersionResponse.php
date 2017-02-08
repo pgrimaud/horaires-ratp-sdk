@@ -35,5 +35,4 @@ class VersionResponse
 
         return $this;
     }
-
 }

@@ -56,7 +56,6 @@ class WrMissions
 
     public function __construct()
     {
-
     }
 
     /**

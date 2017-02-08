@@ -36,7 +36,6 @@ class PerturbationIncidentLine
 
     public function __construct()
     {
-
     }
 
     /**

@@ -26,7 +26,6 @@ class PerturbationCause
 
     public function __construct()
     {
-
     }
 
     /**

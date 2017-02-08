@@ -47,7 +47,6 @@ class WrStations
 
     public function __construct()
     {
-
     }
 
     /**
@@ -193,5 +192,4 @@ class WrStations
         $this->stations = $stations;
         return $this;
     }
-
 }

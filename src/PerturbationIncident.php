@@ -31,7 +31,6 @@ class PerturbationIncident
 
     public function __construct()
     {
-
     }
 
     /**

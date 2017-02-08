@@ -41,7 +41,6 @@ class Line
 
     public function __construct()
     {
-
     }
 
     /**
@@ -169,5 +168,4 @@ class Line
         $this->reseau = $reseau;
         return $this;
     }
-
 }

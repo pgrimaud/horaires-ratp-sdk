@@ -26,7 +26,6 @@ class PerturbationMessage
 
     public function __construct()
     {
-
     }
 
     /**

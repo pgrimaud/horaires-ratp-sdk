@@ -27,7 +27,6 @@ class Reseau
 
     public function __construct()
     {
-
     }
 
     /**
@@ -101,5 +100,4 @@ class Reseau
         $this->name = $name;
         return $this;
     }
-
 }

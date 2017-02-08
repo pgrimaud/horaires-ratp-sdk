@@ -133,5 +133,4 @@ class Stations
         $this->sortAlpha = $sortAlpha;
         return $this;
     }
-
 }

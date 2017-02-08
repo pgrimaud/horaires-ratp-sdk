@@ -26,7 +26,6 @@ class Direction
 
     public function __construct()
     {
-
     }
 
     /**

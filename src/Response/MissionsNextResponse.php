@@ -35,5 +35,4 @@ class MissionsNextResponse
         $this->return = $return;
         return $this;
     }
-
 }

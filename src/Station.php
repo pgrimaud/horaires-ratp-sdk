@@ -46,7 +46,6 @@ class Station
 
     public function __construct()
     {
-
     }
 
     /**

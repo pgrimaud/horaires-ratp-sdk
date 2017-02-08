@@ -36,5 +36,4 @@ class LinesResponse
         $this->return = $return;
         return $this;
     }
-
 }
