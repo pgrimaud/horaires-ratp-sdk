@@ -7,9 +7,8 @@ require __DIR__ . '/../vendor/autoload.php';
  */
 
 use Ratp\Api;
-use Ratp\Lines;
 
-$lines = new Lines();
+$lines = new Ratp\Lines();
 
 $api = new Api();
 

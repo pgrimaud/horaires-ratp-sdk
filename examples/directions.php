@@ -21,5 +21,6 @@ $api    = new Api();
 $return = $api->getDirections($directions)->getReturn();
 
 foreach ($return->getDirections() as $direction) {
+    /** @var \Ratp\Direction $direction */
     echo $direction->getName() . "\n";
 }
