@@ -14,6 +14,23 @@ class Api extends \SoapClient
         'getPerturbationsResponse' => \Ratp\Response\PerturbationsResponse::class,
         'getMissionsNextResponse'  => \Ratp\Response\MissionsNextResponse::class,
 
+        'Direction'                => \Ratp\Direction::class,
+        'Directions'               => \Ratp\Directions::class,
+        'GeoPoint'                 => \Ratp\GeoPoint::class,
+        'Line'                     => \Ratp\Line::class,
+        'Lines'                    => \Ratp\Lines::class,
+        'MissionsNext'             => \Ratp\MissionsNext::class,
+        'Perturbation'             => \Ratp\Perturbation::class,
+        'PerturbationCause'        => \Ratp\PerturbationCause::class,
+        'PerturbationConsequence'  => \Ratp\PerturbationConsequence::class,
+        'PerturbationIncident'     => \Ratp\PerturbationIncident::class,
+        'PerturbationIncidentLine' => \Ratp\PerturbationIncidentLine::class,
+        'PerturbationMessage'      => \Ratp\PerturbationMessage::class,
+        'Perturbations'            => \Ratp\Perturbations::class,
+        'Reseau'                   => \Ratp\Reseau::class,
+        'Station'                  => \Ratp\Station::class,
+        'Stations'                 => \Ratp\Stations::class,
+
         'WrPerturbations' => \Ratp\WrPerturbations::class,
         'WrStations'      => \Ratp\WrStations::class,
         'WrMissions'      => \Ratp\WrMissions::class,
@@ -36,8 +53,9 @@ class Api extends \SoapClient
         }
 
         $options = array_merge([
-            'features' => 1,
-            'trace'    => 1,/** @todo DEBUG ONLY !! Remove before release */
+            'features'    => 1,
+            'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP, /** RATP TOS **/
+            'trace'       => 1,/** @todo DEBUG ONLY !! Remove before release */
         ], $options);
 
         parent::__construct($wsdl, $options);
