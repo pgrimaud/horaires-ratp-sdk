@@ -12,6 +12,7 @@ class Api extends \SoapClient
         'getStationsResponse'      => \Ratp\Response\StationsResponse::class,
         'getDirectionsResponse'    => \Ratp\Response\DirectionsResponse::class,
         'getPerturbationsResponse' => \Ratp\Response\PerturbationsResponse::class,
+        'getGeoPointsResponse'     => \Ratp\Response\GeoPointsResponse::class,
         'WrPerturbations'          => \Ratp\WrPerturbations::class,
         'WrStations'               => \Ratp\WrStations::class,
     ];
@@ -81,5 +82,14 @@ class Api extends \SoapClient
     public function getPerturbations(Perturbations $parameters)
     {
         return $this->__soapCall('getPerturbations', array($parameters));
+    }
+
+    /**
+     * @param GeoPoints $parameters
+     * @return \Ratp\Response\GeoPointsResponse
+     */
+    public function getGeoPoints(GeoPoints $parameters)
+    {
+        return $this->__soapCall('getGeoPoints', array($parameters));
     }
 }
