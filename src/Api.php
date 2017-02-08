@@ -7,10 +7,13 @@ class Api extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = [
-        'getLinesResponse'      => \Ratp\Response\LinesResponse::class,
-        'getVersionResponse'    => \Ratp\Response\VersionResponse::class,
-        'getStationsResponse'   => \Ratp\Response\StationsResponse::class,
-        'getDirectionsResponse' => \Ratp\Response\DirectionsResponse::class
+        'getLinesResponse'         => \Ratp\Response\LinesResponse::class,
+        'getVersionResponse'       => \Ratp\Response\VersionResponse::class,
+        'getStationsResponse'      => \Ratp\Response\StationsResponse::class,
+        'getDirectionsResponse'    => \Ratp\Response\DirectionsResponse::class,
+        'getPerturbationsResponse' => \Ratp\Response\PerturbationsResponse::class,
+        'WrPerturbations'          => \Ratp\WrPerturbations::class,
+        'WrStations'               => \Ratp\WrStations::class,
     ];
 
     /**
@@ -30,13 +33,14 @@ class Api extends \SoapClient
 
         $options = array_merge([
             'features' => 1,
+            'trace'    => 1,/** @todo DEBUG ONLY !! Remove before release */
         ], $options);
 
         parent::__construct($wsdl, $options);
     }
 
     /**
-     * @return mixed
+     * @return \Ratp\Response\VersionResponse
      */
     public function getVersion()
     {
@@ -68,5 +72,14 @@ class Api extends \SoapClient
     public function getDirections(Directions $parameters)
     {
         return $this->__soapCall('getDirections', array($parameters));
+    }
+
+    /**
+     * @param Perturbations $parameters
+     * @return \Ratp\Response\PerturbationsResponse
+     */
+    public function getPerturbations(Perturbations $parameters)
+    {
+        return $this->__soapCall('getPerturbations', array($parameters));
     }
 }
