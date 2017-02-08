@@ -1,8 +1,6 @@
-[RATP LOGO](http://www.ratp.fr/fr/plugins/RATPHomePlugin/images/logo-home.png)
+# Horaires temps réel RATP SDK
 
-# Horaires RATP SDK
-
-Retrieve schedules for any given RER (train), Metro, or Tramway stop in real time.
+Retrieve real time schedules for any given RER (train), Metro, or Tramway stop in real time.
 
 You hate SOAP protocol and want to use the official RATP API? Welcome here.
 
