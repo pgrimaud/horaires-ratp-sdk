@@ -1,0 +1,33 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+/**
+ * GET ALL STATIONS AT A SPECIFIC STATION ON A SPECIFIC LINE
+ */
+
+use Ratp\Api;
+
+$line = new \Ratp\Line();
+$line->setId('M8');
+
+$station = new \Ratp\Station();
+$station->setName('Daumesnil');
+$station->setLine($line);
+
+$direction = new \Ratp\Direction();
+$direction->setSens('R');
+$direction->setLine($line);
+
+$mission = new \Ratp\MissionsNext($station, $direction);
+
+$api    = new Api();
+$result = $api->getMissionsNext($mission)->getReturn();
+
+echo 'Station   : ' . $result->getArgumentStation()->getName() . "\n";
+echo 'Ligne     : ' . $result->getArgumentStation()->getLine()->getId() . "\n";
+echo 'Direction : ' . $result->getArgumentDirection()->getName() . "\n";
+
+foreach ($result->getMissions() as $mission) {
+    echo $mission->stationsMessages[0] . "\n";
+}
