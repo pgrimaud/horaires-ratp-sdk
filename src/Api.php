@@ -7,42 +7,34 @@ class Api extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = [
-        'getLinesResponse'         => \Ratp\Response\LinesResponse::class,
-        'getVersionResponse'       => \Ratp\Response\VersionResponse::class,
-        'getStationsResponse'      => \Ratp\Response\StationsResponse::class,
-        'getDirectionsResponse'    => \Ratp\Response\DirectionsResponse::class,
-        'getPerturbationsResponse' => \Ratp\Response\PerturbationsResponse::class,
-        'getMissionsNextResponse'  => \Ratp\Response\MissionsNextResponse::class,
+        'getLinesResponse'        => \Ratp\Response\LinesResponse::class,
+        'getVersionResponse'      => \Ratp\Response\VersionResponse::class,
+        'getStationsResponse'     => \Ratp\Response\StationsResponse::class,
+        'getDirectionsResponse'   => \Ratp\Response\DirectionsResponse::class,
+        'getMissionsNextResponse' => \Ratp\Response\MissionsNextResponse::class,
 
-        'Direction'                => \Ratp\Direction::class,
-        'Directions'               => \Ratp\Directions::class,
-        'GeoPoint'                 => \Ratp\GeoPoint::class,
-        'Line'                     => \Ratp\Line::class,
-        'Lines'                    => \Ratp\Lines::class,
-        'MissionsNext'             => \Ratp\MissionsNext::class,
-        'Perturbation'             => \Ratp\Perturbation::class,
-        'PerturbationCause'        => \Ratp\PerturbationCause::class,
-        'PerturbationConsequence'  => \Ratp\PerturbationConsequence::class,
-        'PerturbationIncident'     => \Ratp\PerturbationIncident::class,
-        'PerturbationIncidentLine' => \Ratp\PerturbationIncidentLine::class,
-        'PerturbationMessage'      => \Ratp\PerturbationMessage::class,
-        'Perturbations'            => \Ratp\Perturbations::class,
-        'Reseau'                   => \Ratp\Reseau::class,
-        'Station'                  => \Ratp\Station::class,
-        'Stations'                 => \Ratp\Stations::class,
+        'Direction'    => \Ratp\Direction::class,
+        'Directions'   => \Ratp\Directions::class,
+        'GeoPoint'     => \Ratp\GeoPoint::class,
+        'Line'         => \Ratp\Line::class,
+        'Lines'        => \Ratp\Lines::class,
+        'MissionsNext' => \Ratp\MissionsNext::class,
+        'Perturbation' => \Ratp\Perturbation::class,
+        'Reseau'       => \Ratp\Reseau::class,
+        'Station'      => \Ratp\Station::class,
+        'Stations'     => \Ratp\Stations::class,
 
-        'WrPerturbations' => \Ratp\WrPerturbations::class,
-        'WrStations'      => \Ratp\WrStations::class,
-        'WrMissions'      => \Ratp\WrMissions::class,
-        'WrDirections'    => \Ratp\WrDirections::class,
+        'WrStations'   => \Ratp\WrStations::class,
+        'WrMissions'   => \Ratp\WrMissions::class,
+        'WrDirections' => \Ratp\WrDirections::class,
     ];
 
     /**
-     * Client constructor.
-     * @param array $options
+     * Api constructor.
      * @param null $wsdl
+     * @param array $options
      */
-    public function __construct($options = [], $wsdl = null)
+    public function __construct($wsdl = null, $options = [])
     {
         $wsdl = $wsdl ?: __DIR__ . '/../data/ratp.wsdl';
 
@@ -55,7 +47,7 @@ class Api extends \SoapClient
         $options = array_merge([
             'features'    => 1,
             'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP, /** RATP TOS **/
-            'trace'       => 1,/** @todo DEBUG ONLY !! Remove before release */
+            //'trace'       => 1, /** debug only */
         ], $options);
 
         parent::__construct($wsdl, $options);
@@ -94,15 +86,6 @@ class Api extends \SoapClient
     public function getDirections(Directions $parameters)
     {
         return $this->__soapCall('getDirections', array($parameters));
-    }
-
-    /**
-     * @param Perturbations $parameters
-     * @return \Ratp\Response\PerturbationsResponse
-     */
-    public function getPerturbations(Perturbations $parameters)
-    {
-        return $this->__soapCall('getPerturbations', array($parameters));
     }
 
     /**

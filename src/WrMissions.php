@@ -1,6 +1,8 @@
 <?php
 namespace Ratp;
 
+use Mission;
+
 class WrMissions
 {
     /**
