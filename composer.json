@@ -1,5 +1,5 @@
 {
-  "name": "pgrimaud/priceminister-sdk",
+  "name": "pgrimaud/horaires-ratp-sdk",
   "type": "library",
   "description": "RATP SDK - Retrieve schedules for any given RER (train), Metro, or Tramway stop in real time. The RATP is a public transport operator based in Paris, France.",
   "homepage": "https://github.com/pgrimaud/horaires-ratp-sdk",
