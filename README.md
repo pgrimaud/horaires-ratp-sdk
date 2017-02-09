@@ -46,6 +46,9 @@ foreach ($return->getStations() as $station) {
 }
 ```
 
+You can see more examples [here](https://github.com/pgrimaud/horaires-ratp-sdk/tree/master/examples).
+
+
 ## TODO (but la flemme)
 -  Unit tests
 
