@@ -1,10 +1,10 @@
 # Horaires RATP SDK
 
-Retrieve real time schedules for any given RER (train), Metro, or Tramway stop in real time.
+Retrieve real time schedules for any given RER (train), Metro, Tramway or Bus stop in real time.
 
 You hate SOAP protocol and want to use the official RATP API? Welcome here.
 
-**BEWARE : WSDL contains some "*franglish*" such as documentation.**
+**BEWARE : WSDL contains some "*frenglish*" such as documentation.**
 
 ## Translations
 
@@ -13,7 +13,7 @@ This README file is also available in [french](https://github.com/pgrimaud/horai
 ## Requirements
 
  - Access to the RATP API (see [here](https://data.ratp.fr/explore/dataset/horaires-temps-reel/))
- - PHP>=5.6
+ - PHP >= 5.6
 
 ## Installation
 
