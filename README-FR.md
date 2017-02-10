@@ -14,6 +14,7 @@ Ce README est aussi disponible en [anglais](https://github.com/pgrimaud/horaires
 
  - Accès à l'API RATP (voir [ici](https://data.ratp.fr/explore/dataset/horaires-temps-reel/))
  - PHP >= 5.6
+ - package php-soap (ext-soap extension)
 
 ## Installation
 
