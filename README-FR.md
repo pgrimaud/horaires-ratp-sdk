@@ -21,7 +21,7 @@ Ce README est aussi disponible en [anglais](https://github.com/pgrimaud/horaires
 composer require pgrimaud/horaires-ratp-sdk
 ```
 
-## Exemple d'tilisation
+## Exemple d'utilisation
 
 Récupérer toutes les stations d'une ligne.
 
