@@ -6,6 +6,10 @@ You hate SOAP protocol and want to use the official RATP API? Welcome here.
 
 **BEWARE : WSDL contains some "*franglish*" such as documentation.**
 
+## Translations
+
+This README file is also available in [french](https://github.com/pgrimaud/horaires-ratp-sdk/blob/master/README-FR.md).
+
 ## Requirements
 
  - Access to the RATP API (see [here](https://data.ratp.fr/explore/dataset/horaires-temps-reel/))
