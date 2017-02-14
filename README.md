@@ -59,7 +59,7 @@ You can see more examples [here](https://github.com/pgrimaud/horaires-ratp-sdk/t
 
 ## Copyrights
 
-This project is not affiliated with and not endorsed by the [RATP](http://www.ratp.fr).
+This project is not affiliated with or endorsed by the [RATP](http://www.ratp.fr).
 
 ## LICENSE
 Licensed under the terms of the MIT License.
