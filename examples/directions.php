@@ -1,6 +1,10 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+if (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    require __DIR__ . '/../vendor/autoload.php';
+} else {
+    require __DIR__ . '/../../../autoload.php';
+}
 
 /**
  * GET DIRECTIONS OF A SPECIFIC LINE
