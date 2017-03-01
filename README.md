@@ -14,7 +14,7 @@ This README file is also available in [french](https://github.com/pgrimaud/horai
 
  - Access to the RATP API (see [here](https://data.ratp.fr/explore/dataset/horaires-temps-reel/))
  - PHP >= 5.6
- - package php-soap (ext-soap extension)
+ - Package php-soap (ext-soap extension)
 
 ## Installation
 
