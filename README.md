@@ -55,11 +55,13 @@ You can see more examples [here](https://github.com/pgrimaud/horaires-ratp-sdk/t
 
 
 ## TODO (but la flemme)
+
 -  Unit tests
 
 ## Copyrights
 
 This project is not affiliated with or endorsed by the [RATP](http://www.ratp.fr).
 
-## LICENSE
+## Licence
+
 Licensed under the terms of the MIT License.

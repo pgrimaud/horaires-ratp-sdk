@@ -55,11 +55,13 @@ Plus d'exemples sont disponibles [ici](https://github.com/pgrimaud/horaires-ratp
 
 
 ## TODO (mais la flemme)
+
 -  Tests unitaires
 
 ## Copyrights
 
 Ce projet n'est pas affilié à la [RATP](http://www.ratp.fr).
 
-## LICENCE
-Licence MIT
+## Licence
+
+Licence MIT.
