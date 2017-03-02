@@ -7,7 +7,7 @@ if (is_file(__DIR__ . '/../vendor/autoload.php')) {
 }
 
 /**
- * GET ALL STATIONS AT A SPECIFIC STATION ON A SPECIFIC LINE
+ * GET SCHEDULES AT A SPECIFIC STATION ON A SPECIFIC LINE TO A SPECIFIC DIRECTION
  */
 
 use Ratp\Api;
@@ -29,7 +29,7 @@ $api    = new Api();
 $result = $api->getMissionsNext($mission)->getReturn();
 
 echo 'Station   : ' . $result->getArgumentStation()->getName() . "\n";
-echo 'Ligne     : ' . $result->getArgumentStation()->getLine()->getId() . "\n";
+echo 'Line     : ' . $result->getArgumentStation()->getLine()->getId() . "\n";
 echo 'Direction : ' . $result->getArgumentDirection()->getName() . "\n";
 
 foreach ($result->getMissions() as $mission) {
