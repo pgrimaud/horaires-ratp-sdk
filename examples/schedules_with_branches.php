@@ -13,10 +13,10 @@ if (is_file(__DIR__ . '/../vendor/autoload.php')) {
 use Ratp\Api;
 
 $line = new \Ratp\Line();
-$line->setId('M8');
+$line->setId('M7');
 
 $station = new \Ratp\Station();
-$station->setName('Daumesnil');
+$station->setName('Jussieu');
 $station->setLine($line);
 
 $direction = new \Ratp\Direction();
@@ -33,5 +33,5 @@ echo 'Line      : ' . $result->getArgumentStation()->getLine()->getId() . "\n";
 echo 'Direction : ' . $result->getArgumentDirection()->getName() . "\n";
 
 foreach ($result->getMissions() as $mission) {
-    echo $mission->stationsMessages[0] . "\n";
+    echo $mission->stationsMessages[0] . " (Direction : " . $mission->stations[1]->getGeoPointA()->getName() . " )\n";
 }
