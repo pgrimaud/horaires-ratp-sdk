@@ -20,7 +20,7 @@ $station->setName('Jussieu');
 $station->setLine($line);
 
 $direction = new \Ratp\Direction();
-$direction->setSens('R');
+$direction->setSens('A');
 $direction->setLine($line);
 
 $mission = new \Ratp\MissionsNext($station, $direction);
