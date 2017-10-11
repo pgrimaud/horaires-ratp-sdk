@@ -7,26 +7,37 @@ class Api extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = [
-        'getLinesResponse'        => \Ratp\Response\LinesResponse::class,
-        'getVersionResponse'      => \Ratp\Response\VersionResponse::class,
-        'getStationsResponse'     => \Ratp\Response\StationsResponse::class,
         'getDirectionsResponse'   => \Ratp\Response\DirectionsResponse::class,
+        'getLinesResponse'        => \Ratp\Response\LinesResponse::class,
+        'getMissionResponse'      => \Ratp\Response\MissionResponse::class,
         'getMissionsNextResponse' => \Ratp\Response\MissionsNextResponse::class,
+        'getStationsResponse'     => \Ratp\Response\StationsResponse::class,
+        'getVersionResponse'      => \Ratp\Response\VersionResponse::class,
 
-        'Direction'    => \Ratp\Direction::class,
-        'Directions'   => \Ratp\Directions::class,
-        'GeoPoint'     => \Ratp\GeoPoint::class,
-        'Line'         => \Ratp\Line::class,
-        'Lines'        => \Ratp\Lines::class,
-        'MissionsNext' => \Ratp\MissionsNext::class,
-        'Perturbation' => \Ratp\Perturbation::class,
-        'Reseau'       => \Ratp\Reseau::class,
-        'Station'      => \Ratp\Station::class,
-        'Stations'     => \Ratp\Stations::class,
+        'Direction'                => \Ratp\Direction::class,
+        'Directions'               => \Ratp\Directions::class,
+        'GeoPoint'                 => \Ratp\GeoPoint::class,
+        'Itinerary'                => \Ratp\Itinerary::class,
+        'Line'                     => \Ratp\Line::class,
+        'Lines'                    => \Ratp\Lines::class,
+        'Mission'                  => \Ratp\Mission::class,
+        'MissionsNext'             => \Ratp\MissionsNext::class,
+        'Perturbation'             => \Ratp\Perturbation::class,
+        'PerturbationCause'        => \Ratp\PerturbationCause::class,
+        'PerturbationConsequence'  => \Ratp\PerturbationConsequence::class,
+        'PerturbationIncident'     => \Ratp\PerturbationIncident::class,
+        'PerturbationIncidentLine' => \Ratp\PerturbationIncidentLine::class,
+        'PerturbationMessage'      => \Ratp\PerturbationMessage::class,
+        'Reseau'                   => \Ratp\Reseau::class,
+        'Station'                  => \Ratp\Station::class,
+        'Stations'                 => \Ratp\Stations::class,
+        'Tarif'                    => \Ratp\Tarif::class,
 
-        'WrStations'   => \Ratp\WrStations::class,
-        'WrMissions'   => \Ratp\WrMissions::class,
-        'WrDirections' => \Ratp\WrDirections::class,
+        'WrDirections'  => \Ratp\WrDirections::class,
+        'WrItineraries' => \Ratp\WrItineraries::class,
+        'WrMission'     => \Ratp\WrMission::class,
+        'WrMissions'    => \Ratp\WrMissions::class,
+        'WrStations'    => \Ratp\WrStations::class,
     ];
 
     /**
@@ -95,5 +106,14 @@ class Api extends \SoapClient
     public function getMissionsNext(MissionsNext $parameters)
     {
         return $this->__soapCall('getMissionsNext', array($parameters));
+    }
+
+    /**
+     * @param GetMission $parameters
+     * @return \Ratp\Response\MissionResponse
+     */
+    public function getMission(GetMission $parameters)
+    {
+        return $this->__soapCall('getMission', array($parameters));
     }
 }
