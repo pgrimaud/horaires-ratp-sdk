@@ -26,7 +26,6 @@ class PerturbationMessage
 
     public function __construct()
     {
-
     }
 
     /**
@@ -100,5 +99,4 @@ class PerturbationMessage
         $this->updated = $updated;
         return $this;
     }
-
 }

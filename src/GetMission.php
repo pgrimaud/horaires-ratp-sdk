@@ -108,5 +108,4 @@ class GetMission
         $this->stationSortAlpha = $stationSortAlpha;
         return $this;
     }
-
 }

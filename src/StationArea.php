@@ -36,7 +36,6 @@ class StationArea
 
     public function __construct()
     {
-
     }
 
     /**
@@ -146,5 +145,4 @@ class StationArea
         $this->zoneCarteOrange = $zoneCarteOrange;
         return $this;
     }
-
 }

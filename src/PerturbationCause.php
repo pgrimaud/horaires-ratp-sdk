@@ -26,7 +26,6 @@ class PerturbationCause
 
     public function __construct()
     {
-
     }
 
     /**
@@ -100,5 +99,4 @@ class PerturbationCause
         $this->parentName = $parentName;
         return $this;
     }
-
 }

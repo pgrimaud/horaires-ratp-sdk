@@ -86,7 +86,6 @@ class Perturbation
 
     public function __construct()
     {
-
     }
 
     /**
@@ -376,5 +375,4 @@ class Perturbation
         $this->title = $title;
         return $this;
     }
-
 }

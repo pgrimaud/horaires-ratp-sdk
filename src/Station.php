@@ -51,7 +51,6 @@ class Station
 
     public function __construct()
     {
-
     }
 
     /**
@@ -215,5 +214,4 @@ class Station
         $this->stationArea = $stationArea;
         return $this;
     }
-
 }

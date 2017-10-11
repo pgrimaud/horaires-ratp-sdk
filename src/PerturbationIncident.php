@@ -31,7 +31,6 @@ class PerturbationIncident
 
     public function __construct()
     {
-
     }
 
     /**
@@ -123,5 +122,4 @@ class PerturbationIncident
         $this->status = $status;
         return $this;
     }
-
 }

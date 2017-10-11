@@ -36,7 +36,6 @@ class PerturbationIncidentLine
 
     public function __construct()
     {
-
     }
 
     /**
@@ -146,5 +145,4 @@ class PerturbationIncidentLine
         $this->stations = $stations;
         return $this;
     }
-
 }

@@ -26,7 +26,6 @@ class Tarif
 
     public function __construct()
     {
-
     }
 
     /**
@@ -100,5 +99,4 @@ class Tarif
         $this->viaReseau = $viaReseau;
         return $this;
     }
-
 }

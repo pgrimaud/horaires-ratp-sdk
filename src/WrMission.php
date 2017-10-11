@@ -33,7 +33,6 @@ class WrMission
      */
     public function __construct()
     {
-
     }
 
     /**
@@ -125,5 +124,4 @@ class WrMission
         $this->mission = $mission;
         return $this;
     }
-
 }

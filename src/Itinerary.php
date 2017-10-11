@@ -41,7 +41,6 @@ class Itinerary
 
     public function __construct()
     {
-
     }
 
     /**
@@ -169,5 +168,4 @@ class Itinerary
         $this->tarif = $tarif;
         return $this;
     }
-
 }

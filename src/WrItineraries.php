@@ -31,7 +31,6 @@ class WrItineraries
 
     public function __construct()
     {
-
     }
 
     /**
@@ -123,5 +122,4 @@ class WrItineraries
         $this->itineraries = $itineraries;
         return $this;
     }
-
 }

@@ -56,7 +56,6 @@ class StationAcces
 
     public function __construct()
     {
-
     }
 
     /**
@@ -238,5 +237,4 @@ class StationAcces
         $this->y = $y;
         return $this;
     }
-
 }

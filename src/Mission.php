@@ -61,7 +61,6 @@ class Mission
 
     public function __construct()
     {
-
     }
 
     /**
@@ -261,5 +260,4 @@ class Mission
         $this->stationsStops = $stationsStops;
         return $this;
     }
-
 }

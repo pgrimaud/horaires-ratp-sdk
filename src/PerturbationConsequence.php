@@ -26,7 +26,6 @@ class PerturbationConsequence
 
     public function __construct()
     {
-
     }
 
     /**
@@ -100,5 +99,4 @@ class PerturbationConsequence
         $this->name = $name;
         return $this;
     }
-
 }
