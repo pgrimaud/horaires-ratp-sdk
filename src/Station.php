@@ -43,9 +43,15 @@ class Station
      */
     protected $name = null;
 
+    /**
+     * @var StationArea $stationArea
+     */
+    protected $stationArea = null;
+
 
     public function __construct()
     {
+
     }
 
     /**
@@ -58,7 +64,7 @@ class Station
 
     /**
      * @param Direction $direction
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setDirection($direction)
     {
@@ -76,7 +82,7 @@ class Station
 
     /**
      * @param GeoPoint $geoPointA
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setGeoPointA($geoPointA)
     {
@@ -94,7 +100,7 @@ class Station
 
     /**
      * @param GeoPoint $geoPointR
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setGeoPointR($geoPointR)
     {
@@ -112,7 +118,7 @@ class Station
 
     /**
      * @param string $id
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setId($id)
     {
@@ -130,7 +136,7 @@ class Station
 
     /**
      * @param string[] $idsNextA
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setIdsNextA(array $idsNextA = null)
     {
@@ -148,7 +154,7 @@ class Station
 
     /**
      * @param string[] $idsNextR
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setIdsNextR(array $idsNextR = null)
     {
@@ -166,7 +172,7 @@ class Station
 
     /**
      * @param Line $line
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setLine($line)
     {
@@ -184,11 +190,30 @@ class Station
 
     /**
      * @param string $name
-     * @return \Ratp\Station
+     * @return Station
      */
     public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
+
+    /**
+     * @return StationArea
+     */
+    public function getStationArea()
+    {
+        return $this->stationArea;
+    }
+
+    /**
+     * @param StationArea $stationArea
+     * @return Station
+     */
+    public function setStationArea($stationArea)
+    {
+        $this->stationArea = $stationArea;
+        return $this;
+    }
+
 }
