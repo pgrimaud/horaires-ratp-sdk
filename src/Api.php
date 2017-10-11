@@ -24,9 +24,10 @@ class Api extends \SoapClient
         'Station'      => \Ratp\Station::class,
         'Stations'     => \Ratp\Stations::class,
 
-        'WrStations'   => \Ratp\WrStations::class,
-        'WrMissions'   => \Ratp\WrMissions::class,
-        'WrDirections' => \Ratp\WrDirections::class,
+        'WrStations'    => \Ratp\WrStations::class,
+        'WrMissions'    => \Ratp\WrMissions::class,
+        'WrDirections'  => \Ratp\WrDirections::class,
+        'WrItineraries' => \Ratp\WrItineraries::class,
     ];
 
     /**
@@ -95,5 +96,14 @@ class Api extends \SoapClient
     public function getMissionsNext(MissionsNext $parameters)
     {
         return $this->__soapCall('getMissionsNext', array($parameters));
+    }
+
+    /**
+     * @param Perturbations $parameters
+     * @return \Ratp\ResponsePerturbationsResponse
+     */
+    public function getPerturbations(Perturbations $parameters)
+    {
+        return $this->__soapCall('getPerturbations', array($parameters));
     }
 }
