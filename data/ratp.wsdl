@@ -60,6 +60,31 @@
             <xs:element maxOccurs="unbounded" minOccurs="0" name="idsNextR" nillable="true" type="xs:string"/>
             <xs:element minOccurs="0" name="line" nillable="true" type="ax21:Line"/>
             <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="stationArea" nillable="true" type="ax21:StationArea"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="StationArea">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="access" nillable="true" type="ax21:StationAcces"/>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="stations" nillable="true" type="ax21:Station"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="tarifsToParis" nillable="true" type="ax21:Tarif"/>
+            <xs:element minOccurs="0" name="zoneCarteOrange" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="StationAcces">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="address" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="index" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="timeDaysLabel" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="timeDaysStatus" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="timeEnd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="timeStart" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="x" type="xs:double"/>
+            <xs:element minOccurs="0" name="y" type="xs:double"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="Tarif">
@@ -68,6 +93,26 @@
             <xs:element minOccurs="0" name="pleinTarif" type="xs:float"/>
             <xs:element minOccurs="0" name="viaLine" nillable="true" type="ax21:Line"/>
             <xs:element minOccurs="0" name="viaReseau" nillable="true" type="ax21:Reseau"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="WrItineraries">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="ambiguityMessage" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="ambiguousGeoPointsEnd" nillable="true" type="ax21:GeoPoint"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="ambiguousGeoPointsStart" nillable="true" type="ax21:GeoPoint"/>
+            <xs:element minOccurs="0" name="argumentDate" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="itineraries" nillable="true" type="ax21:Itinerary"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Itinerary">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="dateEnd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="dateStart" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="durationsTransit" nillable="true" type="xs:int"/>
+            <xs:element minOccurs="0" name="geoPointEnd" nillable="true" type="ax21:GeoPoint"/>
+            <xs:element minOccurs="0" name="geoPointStart" nillable="true" type="ax21:GeoPoint"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="missions" nillable="true" type="ax21:Mission"/>
+            <xs:element minOccurs="0" name="tarif" nillable="true" type="ax21:Tarif"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="Mission">
