@@ -28,10 +28,12 @@ class WrMission
      */
     protected $mission = null;
 
-    
+    /**
+     * WrMission constructor.
+     */
     public function __construct()
     {
-    
+
     }
 
     /**
@@ -39,7 +41,7 @@ class WrMission
      */
     public function getAmbiguityMessage()
     {
-      return $this->ambiguityMessage;
+        return $this->ambiguityMessage;
     }
 
     /**
@@ -48,8 +50,8 @@ class WrMission
      */
     public function setAmbiguityMessage($ambiguityMessage)
     {
-      $this->ambiguityMessage = $ambiguityMessage;
-      return $this;
+        $this->ambiguityMessage = $ambiguityMessage;
+        return $this;
     }
 
     /**
@@ -57,7 +59,7 @@ class WrMission
      */
     public function getAmbiguousLines()
     {
-      return $this->ambiguousLines;
+        return $this->ambiguousLines;
     }
 
     /**
@@ -66,8 +68,8 @@ class WrMission
      */
     public function setAmbiguousLines(array $ambiguousLines = null)
     {
-      $this->ambiguousLines = $ambiguousLines;
-      return $this;
+        $this->ambiguousLines = $ambiguousLines;
+        return $this;
     }
 
     /**
@@ -75,7 +77,7 @@ class WrMission
      */
     public function getArgumentDate()
     {
-      return $this->argumentDate;
+        return $this->argumentDate;
     }
 
     /**
@@ -84,8 +86,8 @@ class WrMission
      */
     public function setArgumentDate($argumentDate)
     {
-      $this->argumentDate = $argumentDate;
-      return $this;
+        $this->argumentDate = $argumentDate;
+        return $this;
     }
 
     /**
@@ -93,7 +95,7 @@ class WrMission
      */
     public function getArgumentLine()
     {
-      return $this->argumentLine;
+        return $this->argumentLine;
     }
 
     /**
@@ -102,8 +104,8 @@ class WrMission
      */
     public function setArgumentLine($argumentLine)
     {
-      $this->argumentLine = $argumentLine;
-      return $this;
+        $this->argumentLine = $argumentLine;
+        return $this;
     }
 
     /**
@@ -111,7 +113,7 @@ class WrMission
      */
     public function getMission()
     {
-      return $this->mission;
+        return $this->mission;
     }
 
     /**
@@ -120,8 +122,8 @@ class WrMission
      */
     public function setMission($mission)
     {
-      $this->mission = $mission;
-      return $this;
+        $this->mission = $mission;
+        return $this;
     }
 
 }

@@ -7,33 +7,37 @@ class Api extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = [
-        'getDirectionsResponse'    => \Ratp\Response\DirectionsResponse::class,
-        'getLinesResponse'         => \Ratp\Response\LinesResponse::class,
-        'getMissionsNextResponse'  => \Ratp\Response\MissionsNextResponse::class,
-        'getPerturbationsResponse' => \Ratp\Response\PerturbationsResponse::class,
-        'getStationsResponse'      => \Ratp\Response\StationsResponse::class,
-        'getVersionResponse'       => \Ratp\Response\VersionResponse::class,
+        'getDirectionsResponse'   => \Ratp\Response\DirectionsResponse::class,
+        'getLinesResponse'        => \Ratp\Response\LinesResponse::class,
+        'getMissionResponse'      => \Ratp\Response\MissionResponse::class,
+        'getMissionsNextResponse' => \Ratp\Response\MissionsNextResponse::class,
+        'getStationsResponse'     => \Ratp\Response\StationsResponse::class,
+        'getVersionResponse'      => \Ratp\Response\VersionResponse::class,
 
-        'Direction'     => \Ratp\Direction::class,
-        'Directions'    => \Ratp\Directions::class,
-        'GeoPoint'      => \Ratp\GeoPoint::class,
-        'Itinerary'     => \Ratp\Itinerary::class,
-        'Line'          => \Ratp\Line::class,
-        'Lines'         => \Ratp\Lines::class,
-        'Mission'       => \Ratp\Mission::class,
-        'MissionsNext'  => \Ratp\MissionsNext::class,
-        'Perturbation'  => \Ratp\Perturbation::class,
-        'Perturbations' => \Ratp\Perturbations::class,
-        'Reseau'        => \Ratp\Reseau::class,
-        'Station'       => \Ratp\Station::class,
-        'Stations'      => \Ratp\Stations::class,
-        'Tarif'         => \Ratp\Tarif::class,
+        'Direction'                => \Ratp\Direction::class,
+        'Directions'               => \Ratp\Directions::class,
+        'GeoPoint'                 => \Ratp\GeoPoint::class,
+        'Itinerary'                => \Ratp\Itinerary::class,
+        'Line'                     => \Ratp\Line::class,
+        'Lines'                    => \Ratp\Lines::class,
+        'Mission'                  => \Ratp\Mission::class,
+        'MissionsNext'             => \Ratp\MissionsNext::class,
+        'Perturbation'             => \Ratp\Perturbation::class,
+        'PerturbationCause'        => \Ratp\PerturbationCause::class,
+        'PerturbationConsequence'  => \Ratp\PerturbationConsequence::class,
+        'PerturbationIncident'     => \Ratp\PerturbationIncident::class,
+        'PerturbationIncidentLine' => \Ratp\PerturbationIncidentLine::class,
+        'PerturbationMessage'      => \Ratp\PerturbationMessage::class,
+        'Reseau'                   => \Ratp\Reseau::class,
+        'Station'                  => \Ratp\Station::class,
+        'Stations'                 => \Ratp\Stations::class,
+        'Tarif'                    => \Ratp\Tarif::class,
 
-        'WrDirections'    => \Ratp\WrDirections::class,
-        'WrItineraries'   => \Ratp\WrItineraries::class,
-        'WrMissions'      => \Ratp\WrMissions::class,
-        'WrPerturbations' => \Ratp\WrPerturbations::class,
-        'WrStations'      => \Ratp\WrStations::class,
+        'WrDirections'  => \Ratp\WrDirections::class,
+        'WrItineraries' => \Ratp\WrItineraries::class,
+        'WrMission'     => \Ratp\WrMission::class,
+        'WrMissions'    => \Ratp\WrMissions::class,
+        'WrStations'    => \Ratp\WrStations::class,
     ];
 
     /**
@@ -105,11 +109,11 @@ class Api extends \SoapClient
     }
 
     /**
-     * @param Perturbations $parameters
-     * @return \Ratp\Response\PerturbationsResponse
+     * @param GetMission $parameters
+     * @return \Ratp\Response\MissionResponse
      */
-    public function getPerturbations(Perturbations $parameters)
+    public function getMission(GetMission $parameters)
     {
-        return $this->__soapCall('getPerturbations', array($parameters));
+        return $this->__soapCall('getMission', array($parameters));
     }
 }

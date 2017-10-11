@@ -86,6 +86,7 @@ class Perturbation
 
     public function __construct()
     {
+
     }
 
     /**
@@ -98,7 +99,7 @@ class Perturbation
 
     /**
      * @param PerturbationCause $cause
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setCause($cause)
     {
@@ -116,7 +117,7 @@ class Perturbation
 
     /**
      * @param PerturbationConsequence $consequence
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setConsequence($consequence)
     {
@@ -134,7 +135,7 @@ class Perturbation
 
     /**
      * @param string $dateEnd
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setDateEnd($dateEnd)
     {
@@ -152,7 +153,7 @@ class Perturbation
 
     /**
      * @param string $dateStart
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setDateStart($dateStart)
     {
@@ -170,7 +171,7 @@ class Perturbation
 
     /**
      * @param string $id
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setId($id)
     {
@@ -188,7 +189,7 @@ class Perturbation
 
     /**
      * @param PerturbationIncident[] $incidents
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setIncidents(array $incidents = null)
     {
@@ -206,7 +207,7 @@ class Perturbation
 
     /**
      * @param string $level
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setLevel($level)
     {
@@ -224,7 +225,7 @@ class Perturbation
 
     /**
      * @param Line $line
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setLine($line)
     {
@@ -242,7 +243,7 @@ class Perturbation
 
     /**
      * @param string $media
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setMedia($media)
     {
@@ -260,7 +261,7 @@ class Perturbation
 
     /**
      * @param PerturbationMessage $message
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setMessage($message)
     {
@@ -278,7 +279,7 @@ class Perturbation
 
     /**
      * @param string $source
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setSource($source)
     {
@@ -296,7 +297,7 @@ class Perturbation
 
     /**
      * @param Station $station
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setStation($station)
     {
@@ -314,7 +315,7 @@ class Perturbation
 
     /**
      * @param string $status
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setStatus($status)
     {
@@ -332,7 +333,7 @@ class Perturbation
 
     /**
      * @param string $timeEnd
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setTimeEnd($timeEnd)
     {
@@ -350,7 +351,7 @@ class Perturbation
 
     /**
      * @param string $timeStart
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setTimeStart($timeStart)
     {
@@ -368,11 +369,12 @@ class Perturbation
 
     /**
      * @param string $title
-     * @return \Ratp\Perturbation
+     * @return Perturbation
      */
     public function setTitle($title)
     {
         $this->title = $title;
         return $this;
     }
+
 }

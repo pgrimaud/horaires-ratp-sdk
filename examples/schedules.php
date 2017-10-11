@@ -33,5 +33,5 @@ echo 'Line      : ' . $result->getArgumentStation()->getLine()->getId() . "\n";
 echo 'Direction : ' . $result->getArgumentDirection()->getName() . "\n";
 
 foreach ($result->getMissions() as $mission) {
-    echo $mission->stationsMessages[0] . "\n";
+    echo $mission->getStationsMessages()[0] . "\n";
 }
