@@ -100,7 +100,7 @@ class Api extends \SoapClient
 
     /**
      * @param Perturbations $parameters
-     * @return \Ratp\ResponsePerturbationsResponse
+     * @return \Ratp\Response\PerturbationsResponse
      */
     public function getPerturbations(Perturbations $parameters)
     {
