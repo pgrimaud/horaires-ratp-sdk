@@ -1,7 +1,8 @@
 <?php
+
 namespace Ratp;
 
-class WrMission
+class WrMission implements AmbiguousInterface
 {
     /**
      * @var string $ambiguityMessage

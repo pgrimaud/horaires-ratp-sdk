@@ -1,9 +1,9 @@
 <?php
+
 namespace Ratp;
 
-class WrDirections
+class WrDirections implements AmbiguousInterface
 {
-
     /**
      * @var string $ambiguityMessage
      */

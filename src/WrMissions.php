@@ -1,9 +1,10 @@
 <?php
+
 namespace Ratp;
 
 use Mission;
 
-class WrMissions
+class WrMissions implements AmbiguousInterface
 {
     /**
      * @var string $ambiguityMessage

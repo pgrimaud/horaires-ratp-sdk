@@ -1,7 +1,8 @@
 <?php
+
 namespace Ratp;
 
-class WrItineraries
+class WrItineraries implements AmbiguousInterface
 {
     /**
      * @var string $ambiguityMessage
